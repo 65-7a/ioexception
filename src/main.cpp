@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #include <Servo.h>
+#include <math.h>
 
 Servo Base_Horizontal;
 Servo Base_Vertical;
@@ -17,7 +18,7 @@ void setup() {
 float armLength = 2.5;
 
 int moveto(int rad, int deg) {
-  rad = constrain(rad, 0, 2*armLength);
+  rad = constrain(rad, 0, 2 * armLength);
   deg = constrain(deg, 0, 360);
   Base_Horizontal.write(deg);
   float Base_Vert_Angle = acos((pow(rad, 2))/2*(armLength*rad)); //a^2 & c^2 cancel out making it b^2/2ab
