@@ -2,6 +2,8 @@
 #include <Wire.h>
 #include <Adafruit_PWMServoDriver.h>
 
+Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver(0x41);
+
 #define SERVOMIN  150 // Subject to change, based on testing
 #define SERVOMAX  600 // Subject to change, based on testing
 #define USMIN  600  // Subject to change, based on testing
